@@ -12,7 +12,7 @@ import UIKit
 
      var myFriendsArray = ["John", "Bob", "Brian"]
 
-    var myCountryArray = ["Cambodia", "Iceland", "Holland"]
+    //var myCountryArray = ["Cambodia", "Iceland", "Holland"]
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myFriendsArray.count
@@ -24,6 +24,8 @@ import UIKit
          let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
          let text = myFriendsArray[indexPath.row]
          cell.textLabel?.text = text
+     
+        cell?.detailTextLabel?.text = friendsHomeArray[indexPath.row]
          return cell
      }
 
