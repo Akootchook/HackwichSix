@@ -7,13 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
  class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
      var myFriendsArray = ["John", "Bob", "Brian"]
 
+    var myCountryArray = ["Cambodia", "Iceland", "Holland"]
+    
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return myFriendsArray.count
+        return myFriendsArray.count
+        
+        
      }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,8 +32,7 @@ class ViewController: UIViewController {
          super.viewDidLoad()
         
         //Added countries to visit
-        _ = ["Cambodia", "Iceland", "Holland"]
-        
+      
     }
 }
-}
+
