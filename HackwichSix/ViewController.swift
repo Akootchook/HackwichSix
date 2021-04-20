@@ -11,6 +11,7 @@ import UIKit
  class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
      var myFriendsArray = ["John", "Bob", "Brian"]
+    var friendsCity = ["Honolulu", "Kailua", "Waiʻanae"]
 
     //var myCountryArray = ["Cambodia", "Iceland", "Holland"]
     
@@ -25,7 +26,8 @@ import UIKit
          let text = myFriendsArray[indexPath.row]
          cell.textLabel?.text = text
      
-        cell?.detailTextLabel?.text = friendsHomeArray[indexPath.row]
+        cell.detailTextLabel?.text = friendsCity[indexPath.row]
+        
          return cell
      }
 
@@ -34,7 +36,9 @@ import UIKit
          super.viewDidLoad()
         
         //Added countries to visit
-      
+      //HackwichTwelve for class on 20APR2021
+        
+        
     }
 }
 
