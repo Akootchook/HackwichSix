@@ -43,15 +43,20 @@ var restaurantImageData = [String]()
         //forResourse: "mathes name in ProjectNavigator on the left
         let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
         let dict = NSDictionary(contentsOfFile: path!)
+        restaurantImageData = dict?.object(forKey: "restaurantImages") as! [String]
         
-        
-        
-        
-        
+    
+
         //Added countries to visit
    
         
         
     }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: <#T##IndexPath#> as IndexPath, animated: true)
+        
+    }
+        
 }
 
