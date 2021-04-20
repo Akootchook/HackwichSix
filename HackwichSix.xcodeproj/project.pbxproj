@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D7565C4262F675800A5EA1F /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D7565C3262F675800A5EA1F /* Property List.plist */; };
 		7D80563525EED3ED000C38EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80563425EED3ED000C38EB /* AppDelegate.swift */; };
 		7D80563725EED3ED000C38EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80563625EED3ED000C38EB /* SceneDelegate.swift */; };
 		7D80563925EED3ED000C38EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D80563825EED3ED000C38EB /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D7565C3262F675800A5EA1F /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		7D80563125EED3ED000C38EB /* HackwichSix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackwichSix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D80563425EED3ED000C38EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D80563625EED3ED000C38EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				7D80563425EED3ED000C38EB /* AppDelegate.swift */,
 				7D80563625EED3ED000C38EB /* SceneDelegate.swift */,
 				7D80563825EED3ED000C38EB /* ViewController.swift */,
+				7D7565C3262F675800A5EA1F /* Property List.plist */,
 				7D80563A25EED3ED000C38EB /* Main.storyboard */,
 				7D80563D25EED3EE000C38EB /* Assets.xcassets */,
 				7D80563F25EED3EE000C38EB /* LaunchScreen.storyboard */,
@@ -233,6 +236,7 @@
 			files = (
 				7D80564125EED3EE000C38EB /* LaunchScreen.storyboard in Resources */,
 				7D80563E25EED3EE000C38EB /* Assets.xcassets in Resources */,
+				7D7565C4262F675800A5EA1F /* Property List.plist in Resources */,
 				7D80563C25EED3ED000C38EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

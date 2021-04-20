@@ -9,7 +9,11 @@ import UIKit
 
 
  class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    //Part 7.2 in HAckwichTwelve guidesheet "var restaurantImageData = [String}()
+var restaurantImageData = [String]()
+    
+    
      var myFriendsArray = ["John", "Bob", "Brian"]
     var friendsCity = ["Honolulu", "Kailua", "Waiʻanae"]
 
@@ -34,9 +38,18 @@ import UIKit
 
      override func viewDidLoad() {
          super.viewDidLoad()
+        //HackwichTwelve for class on 20APR2021
+        
+        //forResourse: "mathes name in ProjectNavigator on the left
+        let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
+        let dict = NSDictionary(contentsOfFile: path!)
+        
+        
+        
+        
         
         //Added countries to visit
-      //HackwichTwelve for class on 20APR2021
+   
         
         
     }
