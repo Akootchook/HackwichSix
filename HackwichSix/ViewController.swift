@@ -11,11 +11,13 @@ import UIKit
  class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //Part 7.2 in HAckwichTwelve guidesheet "var restaurantImageData = [String}()
+    @IBOutlet weak var tableView: UITableView!
+    
 var restaurantImageData = [String]()
     
     
-     var myFriendsArray = ["John", "Bob", "Brian"]
-    var friendsCity = ["Honolulu", "Kailua", "Waiʻanae"]
+     var myFriendsArray = ["Kapolei Kalapawai"]
+    var friendsCity = ["Kapolei Kalapawai"]
 
     //var myCountryArray = ["Cambodia", "Iceland", "Holland"]
     
@@ -30,7 +32,7 @@ var restaurantImageData = [String]()
          let text = myFriendsArray[indexPath.row]
          cell.textLabel?.text = text
      
-        cell.detailTextLabel?.text = friendsCity[indexPath.row]
+//        cell.detailTextLabel?.text = friendsCity[indexPath.row]
         
          return cell
      }
@@ -43,7 +45,7 @@ var restaurantImageData = [String]()
         //forResourse: "mathes name in ProjectNavigator on the left
         let path = Bundle.main.path(forResource: "Property List", ofType: "plist")
         let dict = NSDictionary(contentsOfFile: path!)
-        restaurantImageData = dict?.object(forKey: "restaurantImages") as! [String]
+        restaurantImageData = dict!.object(forKey: "restaurantImages") as! [String]
         
     
 
@@ -53,10 +55,24 @@ var restaurantImageData = [String]()
         
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: <#T##IndexPath#> as IndexPath, animated: true)
-        
+    //add a new tableview function that detects when a cell is selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?){
         
-}
+        if segue.identifier == "mySegue"
+        
+        {
+            let s1 = segue.destination as! detailViewController
+            let imageIndex = tableView.indexPathForSelectedRow?.row
+            s1.imagePass = restaurantImageData[imageIndex!]
+        }
+    }
+    
+    
+    
 
+
+}
